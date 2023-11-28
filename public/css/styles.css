@@ -1,0 +1,88 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(181, 171, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100vw;
+    min-height: 100vh;
+    padding: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+}
+
+#ingredients {
+    position: relative;
+    margin-top: 50px;
+}
+
+h1 {
+    position: absolute;
+    top: 20px;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+h2 {
+    margin: 20px auto;
+}
+
+ul li, ol li {
+    list-style-type:circle;
+    text-decoration: underline;
+    margin: 10px auto;
+}
+
+ul li::first-letter {
+    text-transform: uppercase;
+}
+
+#etape_preparation {
+    position: relative;
+    margin: 20px auto 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 50px;
+}
+
+
+
+form {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+form input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.583);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.58);
+}
+
+form button {
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.583);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.58);
+    cursor: pointer;
+    transition: .3s all ease-in;
+}
+
+form button:hover {
+    transform: scale(1.2);
+    transition: .3s all ease-out;
+}

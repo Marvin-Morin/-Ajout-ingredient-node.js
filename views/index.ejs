@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recette du jour</title>
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+
+<body>
+
+  <h1>Recette du jour: <%= recipe.title %>
+  </h1>
+  <div id="ingredients">
+    <h2>Ingrédients nécessaires:</h2>
+    <ul>
+      <% recipe.ingredients.forEach(function(ingredient) { %>
+        <li>
+          <%= ingredient %>
+        </li>
+        <% }); %>
+    </ul>
+  </div>
+
+  <form action="/ajouter-ingredient" method="post">
+    <label for="nouvelIngredient">Ajouter un ingrédient :</label>
+    <input type="text" id="nouvelIngredient" name="nouvelIngredient">
+    <button type="submit">Ajouter</button>
+  </form>
+
+
+  <div id="etape_preparation">
+    <h2>Étapes de préparation:</h2>
+    <ol>
+      <% recipe.steps.forEach(function(etape, index) { %>
+        <li>
+          <%= (index + 1) + ". " + etape %>
+        </li>
+        <% }); %>
+    </ol>
+  </div>
+
+
+
+
+</body>
+
+</html>
